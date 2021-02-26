@@ -63,7 +63,7 @@ def extractFunc(CM_HM):
       # print("aplha=",alpha_final,"beta=",beta_final)
       n_final=((pow(2,alpha_final)*(2*beta_final+1))-1)
       SM_extract=SM_extract+chr(n_final)
-  print("Encrypted secret message recevied:",SM_extract)
+  print("Encrypted secret message received:",SM_extract)
   return SM_extract
 #print("Your secret message=",SM_extract)
 

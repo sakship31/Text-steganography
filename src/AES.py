@@ -1,7 +1,7 @@
 import binascii
-from Crypto.Cipher import AES
-from Crypto import Random
-from Crypto.Protocol.KDF import PBKDF2
+from Cryptodome.Cipher import AES
+from Cryptodome import Random
+from Cryptodome.Protocol.KDF import PBKDF2
 
 def get_private_key(password):
     salt = b"this is a salt"
