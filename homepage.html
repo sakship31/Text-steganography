@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #d24dff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color:white;
+  width: 60%;
+  height:500px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.hidebtn {
+  background-color:black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+}
+.revealbtn {
+  background-color:black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+}
+div.centered      { width: 100px; }
+div.columns       { width: 900px; }
+div.columns div   { width: 300px; height: 100px; float: left; }
+div.form2         { width: 400px;height: 100px;  }
+div.form1           {width: 1000px;height: 100px; }
+div.clear         { clear: both; }
+.hidebtn:hover {
+  opacity: 1;
+}
+.revealbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="centered">
+    <div class="columns">
+        <div class="form1" >           
+<form action="/">
+    <p><b>HIDE</b></p><hr>
+    <label for="sec_msg"><b>Secret </b></label><br>
+    <input type="text" placeholder="Enter a secret message" name="sec_msg" id="email" required>
+<br>
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>   
+    <label for="psw"><b> Cover Message</b></label><br>
+    <input type="text" placeholder="Enter your message" name="cvr_msg" id="cvr_msg" required>
+<br>
+    <button type="submit" class="hidebtn">Hide</button>
+</form>
+</div>
+<div class="form2">           
+    <form action="/">
+    <p><b>REVEAL</b></p>
+    <hr>
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+    <label for="psw"><b> Encrypted Message</b></label><br>
+    <input type="text" placeholder="Enter your encrypted message" name="enc_msg" id="enc_msg" required>
+    <br>
+    <button type="submit" class="revealbtn">Get Secret</button>
+    </form>
+</div>
+    </div>
+</div></div>
+<div class="clear"></div>
+</body>
+</html>
