@@ -1,21 +1,36 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #02093b;
+  background-color: #3b021a;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
-  padding: 16px;
-  background-color:white;
-  width: 60%;
-  height:500px;
+.container1 {
+  padding: 40px;
+  background-color: #a23f8c;
+background-image: linear-gradient(180deg, #a23f8c 2%, #784BA0 54%, #2B86C5 100%)!important;
+  width: 100% !important;
+  height: 800px !important;
+}
+
+.container2 {
+  margin-top: 15px;
+  border-radius: 25px;
+  padding-right: 50px;
+  background-color: white !important;
+  width: 80% !important;
+  height: 500 !important;
+}
+
+.form-class {
+  padding: 20px;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 80%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -24,7 +39,8 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -37,7 +53,7 @@ hr {
 
 /* Set a style for the submit button */
 .hidebtn {
-  background-color:black;
+  background-color: rgb(78, 95, 190);
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -47,7 +63,7 @@ hr {
   opacity: 0.9;
 }
 .revealbtn {
-  background-color:black;
+  background-color: rgb(78, 95, 190);
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -56,12 +72,10 @@ hr {
   width: 40%;
   opacity: 0.9;
 }
-div.centered      { width: 100px; }
-div.columns       { width: 900px; }
-div.columns div   { width: 300px; height: 100px; float: left; }
-div.form2         { width: 400px;height: 100px;  }
-div.form1           {width: 1000px;height: 100px; }
-div.clear         { clear: both; }
+
+div.clear {
+  clear: both;
+}
 .hidebtn:hover {
   opacity: 1;
 }
