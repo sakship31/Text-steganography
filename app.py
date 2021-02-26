@@ -1,8 +1,8 @@
 from flask import Flask,request
 from flask import render_template,url_for
 
-from src.sender import hideFunc
-from src.receiver import revealFunc
+from sender import hideFunc
+from receiver import revealFunc
 
 app = Flask(__name__)
 
