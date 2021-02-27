@@ -6,13 +6,19 @@ body {
 * {
   box-sizing: border-box;
 }
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+}
 
 .container1 {
   padding: 40px;
   background-color: #a23f8c;
 background-image: linear-gradient(180deg, #a23f8c 2%, #784BA0 54%, #2B86C5 100%)!important;
   width: 100% !important;
-  height: 800px !important;
+  height: 900px !important;
 }
 
 .container2 {
@@ -55,6 +61,7 @@ hr {
 .hidebtn {
   background-color: rgb(78, 95, 190);
   color: white;
+  border-radius: 100px;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
@@ -65,6 +72,7 @@ hr {
 .revealbtn {
   background-color: rgb(78, 95, 190);
   color: white;
+  border-radius: 100px;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
@@ -82,3 +90,8 @@ div.clear {
 .revealbtn:hover {
   opacity: 1;
 }
+
+
+
+
+

@@ -39,6 +39,7 @@
               <br>
               <button type="submit" class="hidebtn" onclick="onButtonClickHide()">Hide    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
               {% if result %}
+              <h5><b>Below steg message has been copied to your clipboard!</b></h5>
               <input type="text" value='{{result}}'  name="emd_msg" id="emd_msg"  required>
               {% endif %}
             </form>
@@ -56,6 +57,7 @@
               <br>
               <button type="submit" class="revealbtn" onclick="onButtonClickReveal()">Get Secret    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
               {% if result_reveal %}
+              <h5><b>Here is your secret message!</b></h5>
               <input type="text" value='{{result_reveal}}' name="ext_msg" id="ext_msg"  required>
               {% endif %}
             </form>
