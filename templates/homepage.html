@@ -3,9 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/homeStyle.css') }}">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homeStyle.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,28 +17,32 @@
           <img class="pull-right" src="../static/styles/image.png" alt="" width="200" height="150">
         </div>
         <div class="col col-sm-7">
-          <h1 class="pull-left" style="padding: 20px 0;font-weight:600 ;font-family:Georgia, 'Times New Roman', Times, serif">  Text Cloak</h1>
+          <h1 class="pull-left"
+            style="padding: 20px 0;font-weight:600 ;font-family:Georgia, 'Times New Roman', Times, serif"> Text Cloak
+          </h1>
         </div>
       </div>
-    <br>
+      <br>
       <div class="row">
         <div class="col-sm-6">
-            <div class="form-class">
-              <form action="/hide" method="POST">
-                <p><b>HIDE</b></p>
-                <hr>
-                <label for="sec_msg"><b>Secret </b></label><br>
-                <input type="text" placeholder="Enter a secret message" name="sec_msg" id="email" required>
-                <br>
-                <label for="psw"><b>Password</b></label><br>
-                <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
-                <label for="psw"><b> Cover Message</b></label><br>
-                <input type="text" placeholder="Enter your message" name="cvr_msg" id="cvr_msg" required>
-                <br>
-                <button type="submit" class="hidebtn">Hide</button>
-                <!-- <input type="text" placeholder="Here comes your steg msg" name="cvr_msg" id="cvr_msg" required> -->
-              </form>
-            </div>
+          <div class="form-class">
+            <form action="/hide" method="POST">
+              <p><b>HIDE </b></p>
+              <hr>
+              <label for="sec_msg"><b>Secret </b></label><br>
+              <input type="text" placeholder="Enter a secret message" name="sec_msg" id="email" required>
+              <br>
+              <label for="psw"><b>Password</b></label><br>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+              <label for="psw"><b> Cover Message</b></label><br>
+              <input type="text" placeholder="Enter your message" name="cvr_msg" id="cvr_msg" required>
+              <br>
+              <button type="submit" class="hidebtn" onclick="onButtonClickHide()">Hide    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+              {% if result %}
+              <input type="text" value='{{result}}'  name="emd_msg" id="emd_msg"  required>
+              {% endif %}
+            </form>
+          </div>
         </div>
         <div class="col-sm-6">
           <div class="form-class">
@@ -49,16 +54,17 @@
               <label for="psw"><b> Stegcloaked Message</b></label><br>
               <input type="text" placeholder="Enter your stegcloaked message" name="steg_msg" id="steg_msg" required>
               <br>
-              <button type="submit" class="revealbtn">Get Secret</button>
+              <button type="submit" class="revealbtn" onclick="onButtonClickReveal()">Get Secret    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+              {% if result_reveal %}
+              <input type="text" value='{{result_reveal}}' name="ext_msg" id="ext_msg"  required>
+              {% endif %}
             </form>
           </div>
-         
-        </div>
-       
-      </div>
-  </div>
- 
 
+        </div>
+
+      </div>
+    </div>
 
 </body>
 

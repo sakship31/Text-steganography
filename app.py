@@ -14,9 +14,7 @@ def index():
 def hide():
     if request.method == 'POST':
         formInfo=request.form
-        #print(formInfo['sec_msg'],formInfo['psw'],formInfo['cvr_msg'])
         result=hideFunc(formInfo['sec_msg'],formInfo['psw'],formInfo['cvr_msg'])
-        print(result)
         return render_template("homepage.html",result=result)
     return render_template("homepage.html")
 
@@ -24,10 +22,8 @@ def hide():
 def reveal():
     if request.method == 'POST':
         formInfo=request.form
-        #print(formInfo['steg_msg'],formInfo['psw_rev'])
-        result=revealFunc(formInfo['steg_msg'],formInfo['psw_rev'])
-        print(result)
-        return render_template("homepage.html",result=result)
+        result_reveal=revealFunc(formInfo['steg_msg'],formInfo['psw_rev'])
+        return render_template("homepage.html",result_reveal=result_reveal)
     return render_template("homepage.html")
 
 
